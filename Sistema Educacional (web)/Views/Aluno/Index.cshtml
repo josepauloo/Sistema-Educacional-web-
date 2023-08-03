@@ -1,0 +1,55 @@
+﻿<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">Nome</th>
+            <th scope="col">Idade</th>
+            <th scope="col">Matrícula</th>
+            <th scope="col">Nota</th>
+            <th scope="col">CEP</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Toguro</td>
+            <td>17</td>
+            <td>abcdser</td>
+            <td>10</td>
+            <td>11111111</td>
+            <td>
+                <div class="d-grid gap-2 d-md-block">
+                    <a type="submit" class="btn btn-primary" role="button" asp-controller="Aluno" asp-action="BuscarEndereco" asp-route-cep="88357-280"> Endereço</a>
+                </div>
+            </td>
+
+        </tr>
+        <tr>
+            <td>Togurito</td>
+            <td>20</td>
+            <td>aknsjnd</td>
+            <td>9.5</td>
+            <td>0101010101</td>
+            <td>
+                <div class="d-grid gap-2 d-md-block">
+                    <a type="submit" class="btn btn-primary" role="button" asp-controller="Aluno" asp-action="BuscarEndereco" asp-route-cep="88350-665"> Endereço</a>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td>Gnomo</td>
+            <td>27</td>
+            <td>lsjdjjj</td>
+            <td>7.0</td>
+            <td>88350-100</td>
+            <td>
+                <div class="d-grid gap-2 d-md-block">
+                    <a type="submit" class="btn btn-primary" role="button" asp-controller="Aluno" asp-action="BuscarEndereco" asp-route-cep="88350-100"> Endereço</a>
+                </div>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+<div class="d-grid gap-2 d-md-flex justify-content-md-center" style="background-color: #ECB038;">
+    
+    <a class="nav-link text-dark" asp-area="" asp-controller="Aluno" asp-action="Adicionar">Adicionar</a>
+</div>
