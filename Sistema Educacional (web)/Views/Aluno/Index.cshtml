@@ -1,4 +1,11 @@
-﻿<table class="table">
+﻿
+@if(ViewData["MsgErro"] != null)
+{
+    <div class="alert-danger">
+        @ViewData["MsgErro"]
+    </div>
+}
+<table class="table">
     <thead>
         <tr>
             <th scope="col">Nome</th>

@@ -36,7 +36,7 @@ namespace Sistema_Educacional__web_.Controllers
                 }
                 else
                 {
-
+                    ViewData["MsgErro"] = "Erro na busca do endereço! arruma ai bro";
                 }
             }
             catch (Exception)
