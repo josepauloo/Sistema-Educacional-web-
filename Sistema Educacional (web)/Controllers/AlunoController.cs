@@ -33,6 +33,8 @@ namespace Sistema_Educacional__web_.Controllers
                 if(result.IsSuccessStatusCode)
                 {
                     endereco = JsonSerializer.Deserialize<Endereco>(await result.Content.ReadAsStringAsync(), new JsonSerializerOptions());
+
+                    ViewData["MsgSucesso"] = "Deu bom!";
                 }
                 else
                 {
