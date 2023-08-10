@@ -48,7 +48,7 @@ namespace Sistema_Educacional__web_.Controllers
             }
 
 
-            return View("Index");
+            return View("Endereco", endereco);
         }
     }
 }
