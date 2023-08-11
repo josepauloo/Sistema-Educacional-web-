@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Sistema_Educacional__web_.Data.Repositorio.Interfaces;
 using Sistema_Educacional__web_.Models;
 using System.Text.Json;
 
@@ -7,13 +8,16 @@ namespace Sistema_Educacional__web_.Controllers
     public class AlunoController : Controller
     {
         private readonly IConfiguration _configuration;
-        public AlunoController(IConfiguration configuration)
+        private readonly IAlunoRepositorio _alunoRepositorio;
+        public AlunoController(IConfiguration configuration, IAlunoRepositorio alunoRepositorio)
         {
             _configuration = configuration;
+            _alunoRepositorio = alunoRepositorio;
         }
         public IActionResult Index()
         {
-            return View();
+            var aluno = _alunoRepositorio.BuscarAlunos();
+            return View(aluno);
         }
         public IActionResult Adicionar()
         {

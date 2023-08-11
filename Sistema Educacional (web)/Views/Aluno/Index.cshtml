@@ -1,4 +1,6 @@
 ﻿
+@model List<Aluno>
+
 @if(ViewData["MsgErro"] != null)
 {
     <div class="alert-danger">
@@ -27,43 +29,30 @@
         </tr>
     </thead>
     <tbody>
-        <tr>
-            <td>Toguro</td>
-            <td>17</td>
-            <td>abcdser</td>
-            <td>10</td>
-            <td>11111111</td>
-            <td>
-                <div class="d-grid gap-2 d-md-block">
-                    <a type="submit" class="btn btn-primary" role="button" asp-controller="Aluno" asp-action="BuscarEndereco" asp-route-cep="88357-280"> Endereço</a>
-                </div>
-            </td>
+        @if (Model != null && Model.Any())
+        {
+            foreach (Aluno aluno in Model)
+            {
+                <tr>
+                    <td> @aluno.Nome</td>
+                         @aluno.Idade
+                         @aluno.Matrícula
+                         @aluno.Nota
+                         @aluno.Cep
 
-        </tr>
-        <tr>
-            <td>Togurito</td>
-            <td>20</td>
-            <td>aknsjnd</td>
-            <td>9.5</td>
-            <td>0101010101</td>
-            <td>
-                <div class="d-grid gap-2 d-md-block">
-                    <a type="submit" class="btn btn-primary" role="button" asp-controller="Aluno" asp-action="BuscarEndereco" asp-route-cep="88350-665"> Endereço</a>
-                </div>
-            </td>
-        </tr>
-        <tr>
-            <td>Gnomo</td>
-            <td>27</td>
-            <td>lsjdjjj</td>
-            <td>7.0</td>
-            <td>88350-100</td>
-            <td>
-                <div class="d-grid gap-2 d-md-block">
-                    <a type="submit" class="btn btn-primary" role="button" asp-controller="Aluno" asp-action="BuscarEndereco" asp-route-cep="88350-100"> Endereço</a>
-                </div>
-            </td>
-        </tr>
+
+
+                    <td>
+                        <div class="d-grid gap-2 d-md-block">
+                            <a type="submit" class="btn btn-primary" role="button" asp-controller="Aluno" asp-action="BuscarEndereco" asp-route-cep="@aluno.Cep">Endereco</a>
+                        </div>
+                    </td>
+                </tr>
+
+
+
+            }
+        }
     </tbody>
 </table>
 
