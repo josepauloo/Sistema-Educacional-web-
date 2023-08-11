@@ -1,6 +1,6 @@
 ﻿namespace Sistema_Educacional__web_.Models
 {
-    public class Aluno
+    public class Alunos
     {
         public int Id { get; set; }
         public string Nome { get; set; }

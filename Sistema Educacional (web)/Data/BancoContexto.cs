@@ -16,6 +16,6 @@ namespace Sistema_Educacional__web_.Data
             modelBuilder.ApplyConfiguration(new AlunoMapeamento());
         }
 
-        public DbSet<Aluno> Aluno { get; set; }
+        public DbSet<Alunos> Aluno { get; set; }
     }
 }
