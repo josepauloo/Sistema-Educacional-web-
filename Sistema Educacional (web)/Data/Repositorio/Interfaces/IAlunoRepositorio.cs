@@ -1,6 +1,10 @@
-﻿namespace Sistema_Educacional__web_.Data.Repositorio.Interfaces
+﻿using Sistema_Educacional__web_.Models;
+
+namespace Sistema_Educacional__web_.Data.Repositorio.Interfaces
 {
-    public class IAlunoRepositorio
+    public interface IAlunoRepositorio
     {
+        List<Aluno> BuscarAlunos();
+
     }
 }
