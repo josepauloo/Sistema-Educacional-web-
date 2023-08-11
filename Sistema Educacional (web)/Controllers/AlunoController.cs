@@ -34,11 +34,11 @@ namespace Sistema_Educacional__web_.Controllers
                 {
                     endereco = JsonSerializer.Deserialize<Endereco>(await result.Content.ReadAsStringAsync(), new JsonSerializerOptions());
 
-                    ViewData["MsgSucesso"] = "Deu bom!";
                 }
                 else
                 {
                     ViewData["MsgErro"] = "Erro na busca do endereço! arruma ai bro";
+                    return View("Index");
                 }
             }
             catch (Exception)
@@ -47,7 +47,7 @@ namespace Sistema_Educacional__web_.Controllers
                 throw;
             }
 
-
+            ViewData["MsgSucesso"] = "Deu bom!";
             return View("Endereco", endereco);
         }
     }
