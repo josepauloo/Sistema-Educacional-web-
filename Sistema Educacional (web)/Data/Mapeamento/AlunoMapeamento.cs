@@ -18,7 +18,7 @@ namespace Sistema_Educacional__web_.Data.Mapeamento
             
             builder.Property(t => t.Matrícula).HasColumnType("varchar(100)");
             
-            builder.Property(t => t.Nota).HasColumnType("double");
+            builder.Property(t => t.Nota).HasColumnType("decimal");
             
             builder.Property(t => t.Cep).HasColumnType("varchar(100)");
 
