@@ -1,22 +1,25 @@
-﻿<form method="post" asp-area="" asp-controller="Aluno" asp-action="Adicionar">
+﻿@model Aluno
+
+<form method="post" asp-area="" asp-controller="Aluno" asp-action="InserirAluno">
     <div class="form-group">
         <label for="nome">Nome do Aluno:</label>
-        <input type="text" id="nome" name="nome" class="form-control" placeholder="Informe o nome">
+        <input type="text" asp-for="Nome" id="nome" name="nome" class="form-control" placeholder="Informe o nome">
     </div>
     <div class="form-group">
         <label for="idade">Idade do Aluno:</label>
-        <input type="number" id="idade" name="idade" class="form-control" placeholder="Informe a idade">
+        <input type="number" asp-for="Idade" id="idade" name="idade" class="form-control" placeholder="Informe a idade">
     </div>
     <div class="form-group">
         <label for="matrícula">Matrícula do Aluno:</label>
-        <input type="number" id="matrícula" name="matrícula" class="form-control" placeholder="Informe a matrícula">
+        <input type="number" asp-for="Matrícula" id="matrícula" name="matrícula" class="form-control" placeholder="Informe a matrícula">
     </div>
     <div class="form-group">
         <label for="cep">CEP:</label>
-        <input type="text" id="cep" name="cep" class="form-control" placeholder="Informe o CEP">
+        <input type="text" asp-for="Cep" id="cep" name="cep" class="form-control" placeholder="Informe o CEP">
     </div>
 
     <button type="submit" class="btn btn-primary" style="background-color:blueviolet;">Adicionar</button>
+    
     <button type="button" class="btn btn-primary" style="margin: 0 15px; background-color:blueviolet;">
         <a class="nav-link text-white" asp-area="" asp-controller="Aluno" asp-action="Index">Voltar</a>
     </button>
