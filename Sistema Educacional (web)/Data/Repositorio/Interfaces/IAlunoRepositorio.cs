@@ -6,5 +6,7 @@ namespace Sistema_Educacional__web_.Data.Repositorio.Interfaces
     {
         List<Aluno> BuscarAlunos();
 
+        void InserirAluno(Aluno aluno);
+
     }
 }

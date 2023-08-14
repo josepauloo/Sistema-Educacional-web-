@@ -23,6 +23,21 @@ namespace Sistema_Educacional__web_.Controllers
         {
             return View();
         }
+        public IActionResult InserirAluno(Aluno aluno)
+        {
+            try
+            {
+                _alunoRepositorio.InserirAluno(aluno);
+            }
+            catch(Exception e)
+            {
+                TempData["MsgErro"] = "Erro ao inserir aluno";
+            }
+
+            TempData["MsgSucesso"] = "Aluno inserido meu mano";
+
+            return RedirectToAction("Index");
+        }
         public async Task<IActionResult> BuscarEndereco(string cep)
         {
             Endereco endereco = new Endereco();

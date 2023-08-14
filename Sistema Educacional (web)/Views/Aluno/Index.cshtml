@@ -1,6 +1,22 @@
 ﻿
 @model List<Aluno>
 
+@if (TempData["MsgErro"] != null)
+{
+    <div class="alert-danger">
+        @TempData["MsgErro"]
+    </div>
+}
+
+
+@if (TempData["MsgSucesso"] != null)
+{
+    <div class="alert-success">
+        @TempData["MsgSucesso"]
+    </div>
+}
+
+
 @if(ViewData["MsgErro"] != null)
 {
     <div class="alert-danger">
