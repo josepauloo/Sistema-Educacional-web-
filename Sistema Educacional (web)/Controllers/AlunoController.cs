@@ -23,6 +23,16 @@ namespace Sistema_Educacional__web_.Controllers
         {
             return View();
         }
+        public IActionResult Editar(int Id)
+        {
+            var aluno = _alunoRepositorio.BuscarId(Id);
+            if (aluno == null)
+            {
+                TempData["MsgErro"] = "Aluno não encontrado";
+                return RedirectToAction("Index");
+            }
+            return View(aluno);
+        }
         public IActionResult InserirAluno(Aluno aluno)
         {
             try
@@ -35,6 +45,21 @@ namespace Sistema_Educacional__web_.Controllers
             }
 
             TempData["MsgSucesso"] = "Aluno inserido meu mano";
+
+            return RedirectToAction("Index");
+        }
+        public IActionResult EditarAluno(Aluno aluno)
+        {
+            try
+            {
+                _alunoRepositorio.EditarAluno(aluno);
+            }
+            catch (Exception e)
+            {
+                TempData["MsgErro"] = "Erro ao alterar dados";
+            }
+
+            TempData["MsgSucesso"] = "Dados alterados meu mano";
 
             return RedirectToAction("Index");
         }

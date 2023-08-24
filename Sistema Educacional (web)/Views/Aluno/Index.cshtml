@@ -57,13 +57,19 @@
                     <td>@aluno.Cep</td>
 
 
-                    <td>
-                        <div class="d-grid gap-2 d-md-block">
-                            <a type="submit" class="btn btn-primary" role="button" asp-controller="Aluno" asp-action="BuscarEndereco" asp-route-cep="@aluno.Cep">Endereco</a>
-                        </div>
+                    <td class="row col-md">
+                       <a type="submit" class="btn btn-primary" role="button" asp-controller="Aluno" asp-action="BuscarEndereco" asp-route-cep="@aluno.Cep">Endereco</a>
+                        <a type="button" class="btn btn-primary" role="button" asp-controller="Aluno" asp-action="Editar" asp-route-id="@aluno.Id">Editar</a>
+                        @*<a asp-action="Editar2" class="btn btn-success m-1" asp-route-id="@aluno.Id">Alterar</a>*@
+
                     </td>
                 </tr>
-
+             @*   <div class="d-grid gap-2 d-md-block">
+                    <a type="submit" class="btn btn-primary" role="button" asp-controller="Aluno" asp-action="BuscarEndereco" asp-route-cep="@aluno.Cep">Endereco</a>
+                </div>
+                <div class="d-grid gap-2 d-md-block">
+                    <a type="button" class="btn btn-primary" role="button" asp-controller="Aluno" asp-action="Editar" asp-route-cep="@aluno.Id">Editar</a>
+                </div>*@
 
 
             }
