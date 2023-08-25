@@ -1,4 +1,5 @@
-﻿using Sistema_Educacional__web_.Data.Repositorio.Interfaces;
+﻿using Microsoft.EntityFrameworkCore;
+using Sistema_Educacional__web_.Data.Repositorio.Interfaces;
 using Sistema_Educacional__web_.Models;
 
 namespace Sistema_Educacional__web_.Data.Repositorio
@@ -28,11 +29,15 @@ namespace Sistema_Educacional__web_.Data.Repositorio
             _bancoContexto.Aluno.Add(aluno);
             _bancoContexto.SaveChanges();
         }
-        
-        //public List<Aluno> BuscarId(int Id)
-        //{
-        //    return _bancoContexto.Aluno.ToList();
-        //}
+        public void ExcluirAluno(int Id)
+        {
+            var alunoParaExcluir = _bancoContexto.Aluno.FirstOrDefault(a => a.Id == Id);
+            if (alunoParaExcluir != null)
+            {
+                _bancoContexto.Aluno.Remove(alunoParaExcluir);
+                _bancoContexto.SaveChanges();
+            }
+        }
 
         public Aluno BuscarId(int Id)
         {

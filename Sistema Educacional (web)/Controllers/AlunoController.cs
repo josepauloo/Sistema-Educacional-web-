@@ -63,6 +63,21 @@ namespace Sistema_Educacional__web_.Controllers
 
             return RedirectToAction("Index");
         }
+        public IActionResult ExcluirAluno(int id)
+        {
+            try
+            {
+                _alunoRepositorio.ExcluirAluno(id);
+
+                TempData["MsgSucesso"] = "Aluno deletado meu mano";
+            }
+            catch (Exception e)
+            {
+                TempData["MsgErro"] = "Erro ao deletar aluno";
+            }
+
+            return RedirectToAction("Index");
+        }
         public async Task<IActionResult> BuscarEndereco(string cep)
         {
             Endereco endereco = new Endereco();
