@@ -17,5 +17,6 @@ namespace Sistema_Educacional__web_.Data
         }
 
         public DbSet<Aluno> Aluno { get; set; }
+        public DbSet<Login> Login{ get; set; }
     }
 }

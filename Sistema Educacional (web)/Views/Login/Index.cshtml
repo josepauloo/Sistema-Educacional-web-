@@ -2,15 +2,31 @@
     ViewData["Title"] = "_LayoutDeslogado";
 }
 
-<form class="row g-3">
+@if (TempData["MsgSucesso"] != null)
+{
+    <div class="alert-success">
+        @TempData["MsgSucesso"]
+    </div>
+}
+
+@if (TempData["MsgErro"] != null)
+{
+    <div class="alert-danger">
+        @TempData["MsgErro"]
+    </div>
+}
+
+@model Login
+
+<form class="row g-3" asp-controller="Login" asp-action="BuscarLogin">>
     <div class="col-md-6">
         <label formaction="inputEmail4" class="form-label">Usuário</label>
-        <input type="email" class="form-control" id="inputEmail4" />
+        <input type="email" class="form-control" id="inputEmail4" asp-for="Email"/>
         <label for="inputPassword4" class="form-label">Senha</label>
-        <input type="password" class="form-control" id="inputPassword" />
+        <input type="password" class="form-control" id="inputPassword" asp-for="Senha"/>
     </div>
 
     <div class="col-12">
-        <a class="btn btn-primary col-1" role="button" asp-controller="Home" asp-action="Index">Entrar</a>
+        <button class="btn btn-primary col-1" role="button">Entrar</button>
     </div>
 </form>
