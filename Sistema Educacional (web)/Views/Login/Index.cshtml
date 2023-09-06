@@ -1,5 +1,5 @@
 ﻿@{
-    ViewData["Title"] = "_LayoutDeslogado";
+    Layout = "_LayoutDeslogado";
 }
 
 @if (TempData["MsgSucesso"] != null)
@@ -19,7 +19,7 @@
 @model Login
 
 <div class="text-center">
-    <h2 class="display-4">Login</h3>
+    <h4 class="display-4"><strong>Login</strong></h4>
 </div>
 
 <form class="row g-3" asp-controller="Login" asp-action="BuscarLogin">

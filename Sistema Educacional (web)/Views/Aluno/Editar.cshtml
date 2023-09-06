@@ -1,7 +1,7 @@
 ﻿@model Aluno
 
 <div class="text-center">
-    <h2 class="display-4">Edite as informações do aluno</h2>
+    <h4 class="display-4"><strong>EDITE AS INFORMAÇÕES DO ALUNO</strong></h4>
 </div>
 
 <form method="post" asp-area="" asp-controller="Aluno" asp-action="EditarAluno">
@@ -22,8 +22,13 @@
         <label for="cep">CEP:</label>
         <input type="text" asp-for="Cep" id="cep" name="cep" class="form-control" placeholder="Informe o CEP">
     </div>
+    <br />
+    <div class="btn-group">
+        <button type="submit" class="btn btn-primary">Alterar</button>
 
-    <button type="submit" class="btn btn-primary btn-sm">Alterar</button>
-    <a class="btn btn-secondary nav-link text-white" asp-controller="Aluno" asp-action="Index" role="button" >Voltar</a>
+        <button type="button" class="btn btn-secondary">
+            <a class="nav-link text-white" asp-area="" asp-controller="Aluno" asp-action="Index">Voltar</a>
+        </button>
+    </div>
    
 </form>

@@ -1,4 +1,6 @@
-﻿<table class="table">
+﻿@model List<Aluno>
+
+<table class="table">
     <thead>
         <tr>
             <th scope="col">Matéria</th>
@@ -19,22 +21,78 @@
         </tr>
         <tr>
             <td>Português</td>
-            <td>Togurito</td>
-            <td>10</td>
-            <td>0101010101</td>
-            <td>0</td>
-
-        </tr>
-        <tr>
-            <td>Português</td>
             <td>Gnomo</td> 
             <td>7</td>
             <td>47474747474</td>
             <td>4</td>
 
         </tr>
+        <tr>
+            <td>Português</td>
+            <td>Silvio o santos</td>
+            <td>3</td>
+            <td>47474747474</td>
+            <td>0</td>
+
+        </tr>
+
+                <tr>
+            <td>Português</td>
+            <td>Silvio</td> 
+            <td>8</td>
+            <td>47474747474</td>
+            <td>0</td>
+
+        </tr>
+        <tr>
+            <td>Português</td>
+            <td>o</td>
+            <td>9</td>
+            <td>47474747474</td>
+            <td>1</td>
+
+        </tr>
+        <tr>
+            <td>Santos</td>
+            <td>Santos</td>
+            <td>10</td>
+            <td>47474747474</td>
+            <td>2</td>
+
+        </tr>
     </tbody>
 </table>
-<div class="d-grid gap-2 d-md-flex justify-content-md-center">
-    @Html.ActionLink("Adicionar nota", "Adicionar", "Professor", null, new { @class = "btn btn-primary" })
+@*<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">Nome</th>
+            <th scope="col">Idade</th>
+            <th scope="col">Matrícula</th>
+            <th scope="col">Nota</th>
+        </tr>
+    </thead>
+    <tbody>
+        @if (Model != null && Model.Any())
+        {
+            foreach (Aluno aluno in Model)
+            {
+                <tr>
+                    <td>@aluno.Nome</td>
+                    <td>@aluno.Idade</td>
+                    <td>@aluno.Matrícula</td>
+                    <td>@aluno.Nota</td>
+                    <td>@aluno.Cep</td>
+                </tr>
+            }
+        }
+    </tbody>
+</table>*@
+<div class="btn-group">
+    <button type="button" class="btn btn-primary">
+        <a class="nav-link text-white" asp-area="" asp-controller="Professor" asp-action="Adicionar">Adicionar</a>
+    </button>
+
+    <button type="button" class="btn btn-secondary">
+        <a class="nav-link text-white" asp-area="" asp-controller="Home" asp-action="Index">Voltar</a>
+    </button>
 </div>
