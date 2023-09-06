@@ -76,31 +76,8 @@
         </tr>
     </tbody>
 </table>
-@*<table class="table">
-    <thead>
-        <tr>
-            <th scope="col">Nome</th>
-            <th scope="col">Idade</th>
-            <th scope="col">Matrícula</th>
-            <th scope="col">Nota</th>
-        </tr>
-    </thead>
-    <tbody>
-        @if (Model != null && Model.Any())
-        {
-            foreach (Aluno aluno in Model)
-            {
-                <tr>
-                    <td>@aluno.Nome</td>
-                    <td>@aluno.Idade</td>
-                    <td>@aluno.Matrícula</td>
-                    <td>@aluno.Nota</td>
-                    <td>@aluno.Cep</td>
-                </tr>
-            }
-        }
-    </tbody>
-</table>*@
+
+
 <div class="btn-group">
     <button type="button" class="btn btn-primary">
         <a class="nav-link text-white" asp-area="" asp-controller="Professor" asp-action="Adicionar">Adicionar</a>
