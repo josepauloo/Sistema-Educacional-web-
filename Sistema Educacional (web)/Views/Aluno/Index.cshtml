@@ -42,9 +42,9 @@
 
                     <td class="row col-md">
                         <div class="btn-group" role="group">
-                            <a type="submit" class="btn btn-primary btn-sm" role="button" asp-controller="Aluno" asp-action="BuscarEndereco" asp-route-cep="@aluno.Cep">Endereco</a>
-                            <a type="button" class="btn btn-success  btn-sm" role="button" asp-controller="Aluno" asp-action="Editar" asp-route-id="@aluno.Id">Editar</a>
-                            <a type="button" class="btn btn-danger btn-sm" role="button" asp-controller="Aluno" asp-action="ExcluirAluno" asp-route-id="@aluno.Id">Excluir</a>
+                            <a type="submit" class="btn btn-outline-primary btn-sm" role="button" asp-controller="Aluno" asp-action="BuscarEndereco" asp-route-cep="@aluno.Cep">Endereco</a>
+                            <a type="button" class="btn btn-outline-success  btn-sm" role="button" asp-controller="Aluno" asp-action="Editar" asp-route-id="@aluno.Id">Editar</a>
+                            <a type="button" class="btn btn-outline-danger btn-sm" role="button" asp-controller="Aluno" asp-action="ExcluirAluno" asp-route-id="@aluno.Id">Excluir</a>
                         </div>
                     </td>
                 </tr>
@@ -53,10 +53,10 @@
     </tbody>
 </table>
 
-<button type="button" class="btn btn-primary  justify-content-md-center" style="margin: 0 15px; background-color:blueviolet;">
+<button type="button" class="btn btn-primary btn-sm">
     <a class="nav-link text-white" asp-area="" asp-controller="Aluno" asp-action="Adicionar">Adicionar</a>
 </button>
 
-<button type="button" class="btn btn-primary justify-content-md-center" style="margin: 0 15px; background-color:blueviolet;">
+<button type="button" class="btn btn-primary btn-sm">
     <a class="nav-link text-white" asp-area="" asp-controller="Home" asp-action="Index">Voltar</a>
 </button>

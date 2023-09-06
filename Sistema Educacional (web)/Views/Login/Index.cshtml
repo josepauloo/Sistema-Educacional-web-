@@ -18,15 +18,15 @@
 
 @model Login
 
-<form class="row g-3" asp-controller="Login" asp-action="BuscarLogin">>
-    <div class="col-md-6">
+<form class="row g-3" asp-controller="Login" asp-action="BuscarLogin">
+    <div class="col-md-6 position-absolute top-50 start-50 translate-middle">
         <label formaction="inputEmail4" class="form-label">Usuário</label>
         <input type="email" class="form-control" id="inputEmail4" asp-for="Email"/>
         <label for="inputPassword4" class="form-label">Senha</label>
         <input type="password" class="form-control" id="inputPassword" asp-for="Senha"/>
-    </div>
 
-    <div class="col-12">
-        <button class="btn btn-primary col-1" role="button">Entrar</button>
+        <div class="col-12 justify-content-center ">
+            <button class="btn btn-primary btn-sm" role="button">Entrar</button>
+        </div>
     </div>
 </form>
