@@ -16,7 +16,17 @@
     </div>
 }
 
+<style>
+     .linha-tabela {
+        transition: transform 0.3s ease; 
+    }
+        
 
+        .linha-tabela:hover {
+            transform: scale(1.05); 
+            cursor: pointer; 
+        }
+</style>
 
 <table class="table">
     <thead>
@@ -33,7 +43,7 @@
         {
             foreach (Aluno aluno in Model)
             {
-                <tr>
+                <tr class="linha-tabela">
                     <td>@aluno.Nome</td>
                     <td>@aluno.Idade</td>
                     <td>@aluno.Matrícula</td>
