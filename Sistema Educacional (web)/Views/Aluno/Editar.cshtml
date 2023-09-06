@@ -1,5 +1,9 @@
 ﻿@model Aluno
 
+<div class="text-center">
+    <h2 class="display-4">Edite as informações do aluno</h2>
+</div>
+
 <form method="post" asp-area="" asp-controller="Aluno" asp-action="EditarAluno">
     <input type="hidden" asp-for="Id" />
     <div class="form-group">
@@ -20,8 +24,6 @@
     </div>
 
     <button type="submit" class="btn btn-primary btn-sm">Alterar</button>
-
-    <button type="button" class="btn btn-primary btn-sm">
-        <a class="nav-link text-white" asp-area="" asp-controller="Aluno" asp-action="Index">Voltar</a>
-    </button>
+    <a class="btn btn-secondary nav-link text-white" asp-controller="Aluno" asp-action="Index" role="button" >Voltar</a>
+   
 </form>
